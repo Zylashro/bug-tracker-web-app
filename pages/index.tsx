@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+export const Home: NextPage = () => {
+  const [ text, setText ] = useState("Click me!");  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,6 +19,13 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+
+        <div id='test-button'>
+          <p>
+            Click the button!
+          </p>
+          <button onClick={() => setText("You clicked me!")}>{text}</button>
+        </div>
 
         <p className={styles.description}>
           Get started by editing{' '}
