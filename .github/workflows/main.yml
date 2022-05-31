@@ -41,7 +41,7 @@ jobs:
       - name: Test
         run: npm test
       
-      - name: Cypress
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm start
+      #- name: Cypress
+      #  uses: cypress-io/github-action@v2
+      #  with:
+      #    start: npm start
